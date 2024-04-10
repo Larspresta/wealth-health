@@ -1,3 +1,4 @@
+import EmployeeList from "../features/EmployeeTable";
 import Form from "./Form";
 import Header from "./Header";
 
@@ -6,6 +7,7 @@ function AppLayout() {
     <div>
       <Header />
       <Form />
+      <EmployeeList />
     </div>
   );
 }
