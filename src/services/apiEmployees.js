@@ -10,11 +10,8 @@ export async function getEmployees() {
   return data;
 }
 
-export async function createEmployee() {
-  const { data, error } = await supabase
-    .from("employees")
-    .insert([{ some_column: "someValue", other_column: "otherValue" }])
-    .select();
+export async function createEmployee(newEmployee) {
+  const { data, error } = await supabase.from("employees").insert([newEmployee]).select();
 
   if (error) {
     console.error(error);
