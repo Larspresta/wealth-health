@@ -55,7 +55,7 @@ function EmployeeList() {
             onInput={onFilterTextBoxChanged}
           />
         </div>
-        <div className="ag-theme-quartz" style={{ height: 400 }}>
+        <div className="ag-theme-quartz" style={{ height: 800 }}>
           <AgGridReact
             rowData={employees}
             columnDefs={colDefs}

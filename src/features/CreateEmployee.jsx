@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createEmployee } from "../services/apiEmployees";
 import Toast from "react-tiny-toaster";
 import { useState } from "react";
+import { usStates } from "../utils/helpers";
 
 function CreateEmployee() {
   const [showToast, setShowToast] = useState(false);
@@ -110,9 +111,11 @@ function CreateEmployee() {
           <div className="flex flex-col p-3">
             <label htmlFor="State">State</label>
             <select className="border-2 p-1" id="State" {...register("State")}>
-              <option value="AL">Alabama</option>
-              <option value="FL">Florida</option>
-              <option value="CO">Colorade</option>
+              {usStates.map((state) => (
+                <option key={state.value} value={state.value}>
+                  {state.label}
+                </option>
+              ))}
             </select>
 
             <label htmlFor="ZipCode">Zip Code</label>
@@ -126,7 +129,7 @@ function CreateEmployee() {
           </div>
         </div>
         <input
-          className="mx-auto block bg-green-100 hover:bg-green-500 text-green-700 font-bold hover:text-white py-2 px-8 border border-green-500 hover:border-transparent rounded"
+          className="mx-auto block bg-green-50 hover:bg-green-500 text-green-700 font-bold hover:text-white py-2 px-8 border-2 border-green-500 hover:border-transparent rounded"
           type="submit"
           disabled={isCreating}
         />
