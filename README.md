@@ -1,6 +1,6 @@
 ## Wealth Health
 
-Wealth Health is a modern web application designed to manage employee data efficiently. Built with React, it leverages powerful tools such as Vite, React Query, and AG Grid to deliver a high-performance, responsive user experience.
+Wealth Health is a modern web application designed to create employee data efficiently. Built with React, it leverages powerful tools such as Vite, React Query, and AG Grid to deliver a high-performance user experience. 🚀
 
 ## Features
 
@@ -10,17 +10,18 @@ Performance Optimized: Built with performance in mind, using React Query for eff
 
 ## Technologies Used
 
-React.js
-Vite
-AG Grid
-React Query
-Tailwind CSS
-Custom made React-tiny-toast component
-Netlify (for deployment)
+- React.js
+- Vite
+- AG Grid
+- React Query
+- Tailwind CSS
+- Custom made React-tiny-toast component 🍞
+- Netlify (for deployment)
 
 ## Getting Started
 
-Prerequisites
+### Prerequisites
+
 Before you begin, ensure you have installed the latest version of Node.js. This project was built using Node.js version 14.x.
 
 ## Installation
