@@ -1,8 +1,11 @@
 import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createEmployee } from "../services/apiEmployees";
+import { useState } from "react";
+import Toast from "react-tiny-toaster";
 
 function CreateEmployee() {
+  const [show, setShow] = useState(false);
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
 
@@ -11,7 +14,7 @@ function CreateEmployee() {
   const { mutate, isLoading: isCreating } = useMutation({
     mutationFn: createEmployee,
     onSuccess: () => {
-      alert("new Employee created");
+      setShow(true);
       queryClient.invalidateQueries({ queryKey: ["employees"] });
       reset();
     },
@@ -128,6 +131,7 @@ function CreateEmployee() {
           disabled={isCreating}
         />
       </form>
+      <Toast msg="new Employee created" show={show}></Toast>;
     </div>
   );
 }
