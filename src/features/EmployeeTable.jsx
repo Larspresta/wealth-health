@@ -46,7 +46,7 @@ function EmployeeList() {
     <div style={containerStyle}>
       <div className="mx-auto max-w-[1300px] w-full p-4">
         <div className="text-xl py-3">
-          <span>Search:</span>
+          <label htmlFor="filter-text-box">Search:</label>
           <input
             className="border-2 mx-2"
             type="text"
